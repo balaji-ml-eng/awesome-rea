@@ -1,1 +1,4 @@
 .DS_Store
+
+# Local Cloudflare CLI cache
+.wrangler/

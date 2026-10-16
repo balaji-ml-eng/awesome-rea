@@ -38,3 +38,13 @@ npx wrangler pages deploy docs --project-name awesome-rea --branch main
 ```
 
 在线目录使用 Cloudflare Pages 的独立地址 `https://awesome-rea-e7l.pages.dev/`。GitHub Pages 实际继承账号主站的旧域名 `tjystu.top` 并发生跳转，本次未修改账号主站。编辑 `data/cases.json` 后同步生成页面与 README；以 Cloudflare 部署回执和线上检查确认上线。网站共 22 个 HTML 页面，sitemap 对应主页和 21 个案例。
+
+## 本次 GitHub 搜索实测
+
+2026-10-16 使用 GitHub Search API 查询，以下三个查询均返回 `git-sanbu/awesome-rea`：
+
+- `topic:rea-agents topic:case-studies`
+- `"rea-agents" "use cases" in:description`
+- `"REA" "实践" in:description user:git-sanbu`
+
+这是关键词/主题可检出的证据，不表示通用词搜索排名、个性化推荐、Trending 或 Google/Bing 收录。
