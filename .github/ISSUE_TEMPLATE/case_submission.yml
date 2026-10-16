@@ -1,0 +1,46 @@
+name: "投稿 REA 实践 / Submit a case"
+description: "推荐网上公开的实际用法，附原始出处和成果。"
+title: "[案例] "
+body:
+  - type: input
+    id: title
+    attributes:
+      label: "案例名称 / Case name"
+      placeholder: "用 REA 分析了什么，最后做出了什么？"
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: "原作者与原始链接 / Author and primary sources"
+      description: "README、作者文章、公开代码、演示或调查报告；请尽量链接到明确段落。"
+    validations:
+      required: true
+  - type: textarea
+    id: rea_usage
+    attributes:
+      label: "REA 的具体用途与证据 / Actual REA use"
+      description: "原文哪里明确说用了 REA？分析什么目标，用了哪些操作，其他工具做了哪些部分？"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: "公开成果 / Reported results"
+      description: "产出什么？有哪些公开代码、测试或演示？请说明原作者声称与独立验证的区别。"
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: "局限与未验证项 / Limitations"
+      description: "版本、失败、近似、未测试设备或尚未完成的功能；不了解时可以写未知。"
+    validations:
+      required: true
+  - type: checkboxes
+    id: public
+    attributes:
+      label: "材料范围"
+      options:
+        - label: "我提交的是可公开分享的链接，未附密钥、私有日志或目标软件安装包。"
+          required: true

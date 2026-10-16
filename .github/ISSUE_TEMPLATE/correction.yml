@@ -1,0 +1,17 @@
+name: "资料纠错 / Correct a case"
+description: "修正归因、失效链接、成果或版本状态。"
+title: "[纠错] "
+body:
+  - type: input
+    id: case
+    attributes:
+      label: "案例名称或本仓库链接"
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: "哪里需要修改？"
+      description: "请附新的原始出处、提交或日期；说明旧结论与新信息的关系。"
+    validations:
+      required: true

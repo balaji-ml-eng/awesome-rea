@@ -1,0 +1,98 @@
+# Awesome REA · 大家用 REA 做了什么？
+
+收录网上公开的 **[REA — Reverse Engineer Anything](https://github.com/morluto/rea)** 实践：研究了什么、REA 具体帮了什么、最后做出了什么，以及哪些地方仍未验证。
+
+**中文** · [English](README.en.md) · [投稿案例](https://github.com/git-sanbu/awesome-rea/issues/new?template=case_submission.yml) · [收录标准](CONTRIBUTING.md)
+
+这是独立社区案例集。首批 **21 个案例**均附公开原始来源，其中 5 个来自官方 Showcase，16 个来自社区项目。最后核对：**2026-10-16**。
+
+> 这里的“已收录”表示已阅读来源并找到明确的 REA 使用说明。成果和测试数字按原作者报告转述，本仓库未独立复跑，不代表完整兼容或生产可用。
+
+## 从你的目的开始
+
+- **想把老游戏搬到新平台：** 看 [Desktop Games](cases/desktop-games-nostalgia.md)、[Snowball War](cases/ski-or-die.md)。
+- **想理解一个小功能并自己实现：** 看 [PowerToys 取色器](cases/hexgrab.md)、[Aegis 验证码](cases/aegis-totp.md)、[Ghostty 终端外壳](cases/adamterm.md)。
+- **想做独立桌面应用：** 看 [Paper 无限画布](cases/paper-rs.md)、[录屏工具](cases/rec-rs.md)、[会计账本](cases/ledger-reborn.md)。
+- **想研究协议或平台兼容：** 看 [声卡 DSP](cases/vsl-dsp.md)、[Linux VR 串流](cases/vd-streamer-linux.md)。
+- **想先判断 REA 靠不靠谱：** 看 [源码对照](cases/rea-groundtruth.md)、[Windows 对照评测](cases/rea-lab.md)、[REA 分析自己](cases/rea-on-rea.md)。
+- **想直接动手练习：** 看 [Electron 最小实践](cases/rea-playbook.md)、[CTF 检查器](cases/ductf-masked-squares.md)。
+
+## 案例目录
+
+每个详情页都包含：目标问题 → REA 的作用 → 公开成果 → 局限 → 原始来源。官方案例中的历史重建成果与新 REA 检查分别注明。
+
+### 官方案例
+
+| 案例 | 用 REA 干什么 | 成果与状态 |
+| --- | --- | --- |
+| [DX-Ball：恢复声音左右声道计算](cases/dx-ball.md) | 画面中的位置怎样转换成音效声像？ | 来源记录：该函数通过 3,205 个原始 x86 差分用例，历史编译器重编译后的完整 63 字节匹配。 |
+| [Notion：追踪 Electron 富文本剪贴板桥](cases/notion-clipboard.md) | 网页编辑器如何通过桌面端写入富文本剪贴板？ | 公开案例展示了 renderer → preload → IPC → main 的源码级解释，以及独立模块探针中的富文本标记与 Markdown 表格处理。 |
+| [TH04：恢复 PC-98 弹幕环形角度算法](cases/th04.md) | 环形弹幕如何均匀展开，并叠加瞄准玩家的方向？ | 案例给出 REA 新检查结果，并引用历史 Turbo C++ 检查：包含该辅助函数的 2,139 字节范围匹配。 |
+| [Aegis：从 Android APK 找出动态验证码算法](cases/aegis-totp.md) | 每 30 秒变化的六位登录码是怎么计算的？ | 官方页面报告：提取方法与独立实现对照 133 个用例，并核对 RFC 6238 的六个 SHA-1 参考样例。 |
+| [DownUnderCTF：从二进制恢复 flag 检查方程](cases/ductf-masked-squares.md) | 没有符号和源码，如何找出输入校验逻辑？ | 官方记录了正确候选输出 Correct! / exit 0、错误候选输出 Incorrect! / exit 255；求解后再对照主办方源码与 metadata。 |
+
+### 游戏实践
+
+| 案例 | 用 REA 干什么 | 成果与状态 |
+| --- | --- | --- |
+| [Desktop Games：把砸桌面小游戏移植到 macOS 和浏览器](cases/desktop-games-nostalgia.md) | 怎样理解 Peter 解释器和程序树，并移植交互与资源？ | 公开仓库包含 Swift macOS 版、浏览器版、反编译程序树及资源处理脚本。 |
+| [Ski or Die：用 Rust 重建 Snowball War](cases/ski-or-die.md) | 怎样从旧 DOS 程序恢复投掷、碰撞、刷怪与计分规则？ | 作者公开了 Rust + SDL2 可玩重建、行为规格、逆向笔记与资产提取工具。 |
+
+### 应用实践
+
+| 案例 | 用 REA 干什么 | 成果与状态 |
+| --- | --- | --- |
+| [paper-rs：研究 Paper 后构建 Rust 无限画布](cases/paper-rs.md) | 怎样理解画布、布局和编辑器交互，并实现独立设计工具？ | 公开项目包含无限画布、页面、布局、矢量编辑、白板与 MCP 接口，并列出测试与功能差异。 |
+| [rec-rs：研究 OBS 后做原生 macOS 录屏工具](cases/rec-rs.md) | 怎样做更聚焦的屏幕、摄像头与音频录制工具？ | 项目公开屏幕/摄像头录制、音频混合、回放缓冲与直播功能；作者报告在 Apple Silicon Mac 上开发和测试。 |
+| [terminal-rs：研究 TradingView 交互后做行情终端](cases/terminal-rs.md) | 如何把图表交互调查转化为独立 Rust 行情界面？ | 项目公开 Rust GPU 图表、键盘命令、面板布局与数据接入；界面采用 Bloomberg 风格。 |
+| [Wispr Flow：拆解语音输入链路并做本地小原型](cases/wispr-flow.md) | 录音、转写、上下文和粘贴是如何串起来的？ | 公开拆解报告、Ghidra 补充调查、开发过程与本地 flowlite.py 原型。 |
+| [hexgrab：从 PowerToys 二进制研究取色器](cases/hexgrab.md) | 全局快捷键、像素取色和剪贴板怎样配合？ | 公开源码与 docs/rea-findings.md；作者报告 9 条发现中 8 条完全正确。 |
+| [AdamTerm：研究 Ghostty 外壳后做自己的终端](cases/adamterm.md) | 终端核心、原生窗口、菜单和服务之间怎么分工？ | 作者以 AppKit + SwiftTerm 做了带原生标签页的精简 macOS 终端，并提供自检命令。 |
+| [Ledger Reborn：研究 QuickBooks 后做本地账本](cases/ledger-reborn.md) | 如何理解桌面会计工作流，并做独立本地应用？ | 公开 preview 包、源码和案例记录；作者列出发票、付款、库存、银行对账和报表等已实现流程。 |
+
+### 硬件与兼容
+
+| 案例 | 用 REA 干什么 | 成果与状态 |
+| --- | --- | --- |
+| [VSL-DSP：把厂商库分析用于声卡 DSP 工具](cases/vsl-dsp.md) | 厂商控制程序如何发现设备、注册参数和表示增益？ | 作者将调查结果用于 dB 命令、参数命名和线性/dB 转换，并提供 CMocka 测试。 |
+| [Virtual Desktop Streamer：替换平台层实现 Linux 移植](cases/vd-streamer-linux.md) | 如何保留协议库，把采集、编码、音频和输入换成 Linux 实现？ | 公开 Linux 移植源码、构建与模拟头显测试，使用 PipeWire/X11、GStreamer 和 uinput。 |
+
+### 分析与评测
+
+| 案例 | 用 REA 干什么 | 成果与状态 |
+| --- | --- | --- |
+| [OpenBSD netcat：静态审计已发布 ELF](cases/netcat-analysis.md) | 已发布 netcat 包含哪些网络、代理和安全相关实现？ | 公开函数/字符串/调用路径调查、results.txt 与 files/ 下的原始 JSON 结果。 |
+| [REA on REA：分析工具自身并检验预测](cases/rea-on-rea.md) | REA 如何选择原生分析 provider，又怎样判断 provider 不可用？ | 公开完整过程与测试回执；作者报告四个回答都只部分正确，八个 Ghidra 检查结果中预测错了三个。 |
+| [rea-groundtruth：对照已知源码找分析盲点](cases/rea-groundtruth.md) | 工具报告零个 IPC/窗口时，是程序真的没有，还是分析漏掉了？ | 作者公开一键复现：特定 webpack 形态的 Electron API 没被识别，并记录签名后 ASAR integrity mismatch 的处理方式。 |
+| [rea-lab：测量 REA 对 Windows 逆向任务的实际帮助](cases/rea-lab.md) | 加上 REA 后，代理解决任务的成功率、耗时和成本怎样变化？ | Study 1 报告两组均解出 28/30；Study 2 为无 REA 11/24、用 REA 4/24；Study 3 为 71/72 与 68/72。作者报告 REA 组耗时与成本更高。 |
+
+### 学习与复现
+
+| 案例 | 用 REA 干什么 | 成果与状态 |
+| --- | --- | --- |
+| [rea-playbook：把 Electron Evidence 变成可读报告与重建](cases/rea-playbook.md) | 拿到巨大 Evidence JSON 后，怎样提取可读事实并验证重建？ | 公开脱敏 Evidence fixture、file:line 报告、recreate 与断言；作者报告 10/10 重建检查通过。 |
+
+## 我们怎样收录
+
+1. **必须有公开原文。** 优先作者 README、调查报告、代码/测试与官方案例；第三方案例集用于发现线索，再回到一手来源。
+2. **必须明确使用 REA。** 仅仅使用 Claude、Codex、Ghidra，或名字里带 REA，不足以收录。
+3. **写清实际贡献。** REA 分析、其他工具、人工阅读与独立重写分别说明；同一项目不拆成多个案例凑数。
+4. **保留局限和失败。** 没有运行对照、只用模拟设备、功能未实现、分析漏报，都在详情页注明。
+5. **固定出处。** GitHub 原文尽量固定到提交 SHA；版本与结论保留核对日期，后续修复不自动推翻历史记录。
+
+不把镜像仓库、新闻转载、工具安装成功或尚未实施的需求 Issue 算作实践成果。收录不改变原项目代码、资产或品牌的权利归属；请在有权研究的目标上复现。
+
+## REA 官方入口
+
+- [官方仓库](https://github.com/morluto/rea) · [官方网站](https://rea.tools/) · [安装说明](https://github.com/morluto/rea/blob/main/docs/installation.md)
+- [官方实操指南](https://rea.tools/guides/) · [官方 Showcase](https://rea.tools/showcase/)
+
+本仓库记录案例，不分发 REA 安装包。安装和版本要求以官方入口为准。
+
+## 贡献与数据
+
+欢迎通过 [Issue 投稿](https://github.com/git-sanbu/awesome-rea/issues/new?template=case_submission.yml) 或 PR 补充案例、更新状态、纠正归因。请提供**原始链接、REA 的具体用途、成果与局限**。
+
+- [贡献指南](CONTRIBUTING.md) · [案例模板](templates/case.md)
+- [机器可读案例数据](data/cases.json) · [检索与来源记录](SOURCES.md)
+- 本仓库原创整理采用 [MIT License](LICENSE)，外链项目与摘录保留各自权利与许可证。
