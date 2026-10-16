@@ -2,7 +2,7 @@
 
 ![Awesome REA: real projects, original sources, honest limits](assets/cover.svg)
 
-[中文完整目录](README.md) · **English** · [Search the case directory](https://git-sanbu.github.io/awesome-rea/)
+[中文完整目录](README.md) · **English** · [Search the case directory](https://awesome-rea-e7l.pages.dev/)
 
 **Real-world REA use cases, examples, tutorials and AI-assisted reverse engineering case studies.**
 
@@ -10,7 +10,7 @@ An independent collection of public, source-backed uses of [morluto/rea](https:/
 
 **21 cases: 5 official showcases and 16 community projects. Source review date: 2026-10-16.** Each Chinese case note explains the target, REA's role, reported output, limitations and original sources. We reviewed the sources; we did not independently reproduce the projects or their tests.
 
-Search by software or purpose: Ghostty, PowerToys, Electron, game porting, screen recording, Android, or Windows. The [online directory](https://git-sanbu.github.io/awesome-rea/) includes category filters and links to all primary sources.
+Search by software or purpose: Ghostty, PowerToys, Electron, game porting, screen recording, Android, or Windows. The [online directory](https://awesome-rea-e7l.pages.dev/) includes category filters and links to all primary sources.
 
 ## Public cases
 

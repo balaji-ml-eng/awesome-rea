@@ -6,13 +6,13 @@
 
 收录网上公开的 **[REA — Reverse Engineer Anything](https://github.com/morluto/rea)** 实践：研究了什么、REA 具体帮了什么、最后做出了什么，以及哪些地方仍未验证。
 
-**中文** · [English](README.en.md) · [在线搜索案例](https://git-sanbu.github.io/awesome-rea/) · [投稿案例](https://github.com/git-sanbu/awesome-rea/issues/new?template=case_submission.yml) · [收录标准](CONTRIBUTING.md)
+**中文** · [English](README.en.md) · [在线搜索案例](https://awesome-rea-e7l.pages.dev/) · [投稿案例](https://github.com/git-sanbu/awesome-rea/issues/new?template=case_submission.yml) · [收录标准](CONTRIBUTING.md)
 
 这是独立社区案例集。首批 **21 个案例**均附公开原始来源，其中 5 个来自官方 Showcase，16 个来自社区项目。最后核对：**2026-10-16**。
 
 > 这里的“已收录”表示已阅读来源并找到明确的 REA 使用说明。成果和测试数字按原作者报告转述，本仓库未独立复跑，不代表完整兼容或生产可用。
 
-想找具体软件？打开 [可搜索案例目录](https://git-sanbu.github.io/awesome-rea/)，输入 `Ghostty`、`PowerToys`、`Electron`、`游戏移植` 或 `录屏`。也可以按案例类别筛选。
+想找具体软件？打开 [可搜索案例目录](https://awesome-rea-e7l.pages.dev/)，输入 `Ghostty`、`PowerToys`、`Electron`、`游戏移植` 或 `录屏`。也可以按案例类别筛选。
 
 ## 从你的目的开始
 
@@ -104,7 +104,7 @@
 
 ### 怎样快速找到相关实践？
 
-用 [在线目录](https://git-sanbu.github.io/awesome-rea/) 搜索软件名、问题或英文关键词。要用 GitHub 搜 README，可以搜索 [`"rea-agents" in:readme user:git-sanbu`](https://github.com/search?q=%22rea-agents%22+in%3Areadme+user%3Agit-sanbu&type=repositories)。
+用 [在线目录](https://awesome-rea-e7l.pages.dev/) 搜索软件名、问题或英文关键词。要用 GitHub 搜 README，可以搜索 [`"rea-agents" in:readme user:git-sanbu`](https://github.com/search?q=%22rea-agents%22+in%3Areadme+user%3Agit-sanbu&type=repositories)。
 
 ### 可以贡献别人的案例，或失败的尝试吗？
 

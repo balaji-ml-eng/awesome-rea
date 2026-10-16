@@ -7,7 +7,7 @@
 - 名称保留 `awesome-rea`，首页明确写出 Reverse Engineer Anything 与 `rea-agents`，用中英文描述真实用途。
 - 仓库简介覆盖 REA use cases、examples、case studies 与 AI reverse engineering；Topics 围绕实际工具和收录对象设置。
 - 中英文 README 提供目的导航、常见问题、在线搜索入口和投稿入口。
-- GitHub Pages 提供静态案例目录和独立案例页，带 title、description、canonical、Open Graph、结构化列表与 sitemap。案例正文直接出现在 HTML，搜索筛选仅作增强。
+- Cloudflare Pages 提供静态案例目录和独立案例页，带 title、description、canonical、Open Graph、结构化列表与 sitemap。案例正文直接出现在 HTML，搜索筛选仅作增强。
 - 网站首页与仓库 About 的 Website 互相连接，所有案例链接回作者和固定原文。
 - 保留贡献指南、投稿/纠错模板、公开数据和核对日期。
 
@@ -33,6 +33,8 @@
 node scripts/build-site.mjs
 node scripts/build-site.mjs --check
 python3 -m http.server 4178 --directory docs
+# Publish the generated directory after reviewing changes:
+npx wrangler pages deploy docs --project-name awesome-rea --branch main
 ```
 
-Pages 从 `main:/docs` 发布。编辑 `data/cases.json` 后同步生成页面与 README；GitHub 原生 Pages 部署记录才用于确认上线。网站共 22 个 HTML 页面，sitemap 对应主页和 21 个案例。
+在线目录使用 Cloudflare Pages 的独立地址 `https://awesome-rea-e7l.pages.dev/`。GitHub Pages 实际继承账号主站的旧域名 `tjystu.top` 并发生跳转，本次未修改账号主站。编辑 `data/cases.json` 后同步生成页面与 README；以 Cloudflare 部署回执和线上检查确认上线。网站共 22 个 HTML 页面，sitemap 对应主页和 21 个案例。
