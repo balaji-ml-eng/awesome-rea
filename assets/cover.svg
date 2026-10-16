@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-labelledby="title desc">
+<title id="title">Awesome REA — Reverse Engineer Anything use cases</title>
+<desc id="desc">Real projects, original sources, and honest limits. Games, apps, compatibility, and evaluations.</desc>
+<rect width="1200" height="340" rx="18" fill="#f0f5fb"/>
+<path d="M0 0h14v340H0z" fill="#1557b0"/>
+<g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif" fill="#172b4d">
+<text x="60" y="96" font-size="30" font-weight="600">Awesome REA</text>
+<text x="60" y="176" font-size="56" font-weight="750">Reverse Engineer Anything.</text>
+<text x="60" y="234" font-size="32">See what people actually built.</text>
+<text x="60" y="294" font-size="21" fill="#4f6178">Real projects · Original sources · Honest limits</text>
+</g>
+</svg>

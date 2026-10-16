@@ -1,10 +1,16 @@
-# Awesome REA — What people actually do with REA
+# Awesome REA — Reverse Engineer Anything use cases & examples
 
-[中文完整目录](README.md) · **English**
+![Awesome REA: real projects, original sources, honest limits](assets/cover.svg)
+
+[中文完整目录](README.md) · **English** · [Search the case directory](https://git-sanbu.github.io/awesome-rea/)
+
+**Real-world REA use cases, examples, tutorials and AI-assisted reverse engineering case studies.**
 
 An independent collection of public, source-backed uses of [morluto/rea](https://github.com/morluto/rea), the Reverse Engineer Anything MCP server and CLI.
 
 **21 cases: 5 official showcases and 16 community projects. Source review date: 2026-10-16.** Each Chinese case note explains the target, REA's role, reported output, limitations and original sources. We reviewed the sources; we did not independently reproduce the projects or their tests.
+
+Search by software or purpose: Ghostty, PowerToys, Electron, game porting, screen recording, Android, or Windows. The [online directory](https://git-sanbu.github.io/awesome-rea/) includes category filters and links to all primary sources.
 
 ## Public cases
 
@@ -39,3 +45,11 @@ A primary source must explicitly attribute some work to REA. AI-assisted rewrite
 [Submit a case](https://github.com/git-sanbu/awesome-rea/issues/new?template=case_submission.yml) or send a pull request using the [case template](templates/case.md). Submissions in Chinese or English are welcome. Preserve authorship, link to original evidence and describe what remains unknown.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md), [SOURCES.md](SOURCES.md), and [data/cases.json](data/cases.json). Original catalog text is MIT-licensed; linked projects and quoted material retain their own rights.
+
+## Frequently asked questions
+
+**What are REA, rea-agents and Reverse Engineer Anything?** This collection is specifically about [morluto/rea](https://github.com/morluto/rea), whose npm package is `rea-agents`. It provides CLI and MCP analysis tools for coding agents. Unrelated projects sharing the name REA are excluded.
+
+**Do all examples need Ghidra or IDA?** No. JavaScript/Electron static analysis and several package-metadata paths work without a native analysis engine. See each case and the official prerequisites.
+
+**Can I contribute someone else's project or a failed experiment?** Yes. Link to the original author's public report and explain REA's actual role, reported results and limitations. Chinese and English submissions are welcome. Star the repository if you want to find it again later.

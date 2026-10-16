@@ -1,12 +1,18 @@
-# Awesome REA · 大家用 REA 做了什么？
+# Awesome REA — Reverse Engineer Anything 实践案例与用法
+
+![Awesome REA: real projects, original sources, honest limits](assets/cover.svg)
+
+**Real-world REA use cases, examples and AI-assisted reverse engineering case studies.**
 
 收录网上公开的 **[REA — Reverse Engineer Anything](https://github.com/morluto/rea)** 实践：研究了什么、REA 具体帮了什么、最后做出了什么，以及哪些地方仍未验证。
 
-**中文** · [English](README.en.md) · [投稿案例](https://github.com/git-sanbu/awesome-rea/issues/new?template=case_submission.yml) · [收录标准](CONTRIBUTING.md)
+**中文** · [English](README.en.md) · [在线搜索案例](https://git-sanbu.github.io/awesome-rea/) · [投稿案例](https://github.com/git-sanbu/awesome-rea/issues/new?template=case_submission.yml) · [收录标准](CONTRIBUTING.md)
 
 这是独立社区案例集。首批 **21 个案例**均附公开原始来源，其中 5 个来自官方 Showcase，16 个来自社区项目。最后核对：**2026-10-16**。
 
 > 这里的“已收录”表示已阅读来源并找到明确的 REA 使用说明。成果和测试数字按原作者报告转述，本仓库未独立复跑，不代表完整兼容或生产可用。
+
+想找具体软件？打开 [可搜索案例目录](https://git-sanbu.github.io/awesome-rea/)，输入 `Ghostty`、`PowerToys`、`Electron`、`游戏移植` 或 `录屏`。也可以按案例类别筛选。
 
 ## 从你的目的开始
 
@@ -81,6 +87,28 @@
 5. **固定出处。** GitHub 原文尽量固定到提交 SHA；版本与结论保留核对日期，后续修复不自动推翻历史记录。
 
 不把镜像仓库、新闻转载、工具安装成功或尚未实施的需求 Issue 算作实践成果。收录不改变原项目代码、资产或品牌的权利归属；请在有权研究的目标上复现。
+
+## 常见问题
+
+### REA 能做什么？这里有哪些真实用法？
+
+这里收录 REA 游戏移植、桌面应用分析、独立功能实现、协议调查、平台兼容与工具评测。每个条目说明 **REA 使用场景、操作过程、公开成果和局限**，适合寻找 REA examples、REA tutorials 和 reverse engineering use cases 的读者。
+
+### REA、rea-agents 与 Reverse Engineer Anything 是什么关系？
+
+本仓库中的 REA 指 [morluto/rea](https://github.com/morluto/rea)，全称 Reverse Engineer Anything，npm 包名为 `rea-agents`。它为支持 MCP 的 coding agents 提供逆向分析工具，也支持 CLI。它与其他同名 REA 项目无关。
+
+### 所有案例都需要 Ghidra 或 IDA 吗？
+
+不一定。[Electron 最小实践](cases/rea-playbook.md) 使用 JavaScript 静态路径，[AdamTerm](cases/adamterm.md) 使用包与元数据检查；原生代码深度分析常借助 Ghidra、Hopper 或 IDA。具体前提见案例与官方文档。
+
+### 怎样快速找到相关实践？
+
+用 [在线目录](https://git-sanbu.github.io/awesome-rea/) 搜索软件名、问题或英文关键词。要用 GitHub 搜 README，可以搜索 [`"rea-agents" in:readme user:git-sanbu`](https://github.com/search?q=%22rea-agents%22+in%3Areadme+user%3Agit-sanbu&type=repositories)。
+
+### 可以贡献别人的案例，或失败的尝试吗？
+
+可以。提供公开一手链接、实际 REA 使用说明和产出即可；失败与对照评测也有价值。按照 [贡献指南](CONTRIBUTING.md) 投稿，中文或英文都欢迎。觉得有用可以 **Star 保存**，以后更容易找到。
 
 ## REA 官方入口
 

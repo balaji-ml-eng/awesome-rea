@@ -1,0 +1,5 @@
+# GitHub Pages project sites share the host-level robots.txt.
+# This project copy is informational; crawl permission is set by the host.
+User-agent: *
+Allow: /awesome-rea/
+Sitemap: https://git-sanbu.github.io/awesome-rea/sitemap.xml

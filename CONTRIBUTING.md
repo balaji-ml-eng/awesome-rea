@@ -19,6 +19,7 @@
 - 从 [案例模板](templates/case.md) 新建 `cases/<英文短名称>.md`。
 - 在 `README.md` 对应分类增加一条记录，并同步 `README.en.md`。
 - 在 `data/cases.json` 增加同一个案例，`id` 与文件名一致。
+- 更新数据后运行 `node scripts/build-site.mjs`，同步生成 `docs/` 下的在线目录；运行 `node scripts/build-site.mjs --check` 确认生成文件一致。
 - GitHub 原文优先使用 `blob/<完整提交 SHA>/...`，同时保留项目入口。
 - 写核对日期与版本；分清作者报告、本仓库复跑和未验证项。初次收录默认 `source-reviewed-not-reproduced`。
 - 保留作者署名，原创整理，不整篇复制别人的文章或案例集。
